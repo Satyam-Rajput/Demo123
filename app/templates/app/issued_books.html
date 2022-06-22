@@ -1,0 +1,168 @@
+<!-- inheriting base.html for the common code -->
+
+{% extends 'app/base.html' %}
+
+
+<!-- Loading static files in Django -->
+{% load static %} {% block title %}Issued Books{% endblock title %} {% block specificCSS %}
+<link rel="stylesheet" href='{%static "app/css/purchased-books.css"%}'> {% endblock specificCSS %} {% block body %}
+
+<body class="bg-info">{% endblock body %} {% block content %}
+
+    <!-- Main content start -->
+    {% include "app/navbar.html" %}
+
+    <main class="bg-info">
+        <div class="container  justify-content-center mt-3 ">
+            <form action="">
+                <div class="row   login-form">
+
+                    <div class="col-lg-8 col-md-10 col-sm-12 col-12 text-dark bg-dark rounded ">
+                        <div class="row ">
+                            <div class="col-2 bg-dark  pt-1 pb-1">
+                                <img src="../../static/app/images/apple-touch-icon.png" height="50px" alt="LMS">
+                            </div>
+                            <div class="col-10 bg-dark text-center pt-1 pb-1 pe-5 login-heading">
+
+                                <h2 class="text-light login-heading ">Issued Books</h2>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-lg-10 col-md-10 col-sm-12 col-12 offset-md-1 bg-dark overflow-auto ">
+                                <div class="form">
+                                    <table class="table table-dark  text-center table-striped table-hover">
+                                        <thead class="sticky-top ">
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Book</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Category</th>
+                                                <th scope="col">Author</th>
+
+                                                <th colspan="2" scope="col">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+
+
+                                            <tr class=" align-text-bottom">
+                                                <th scope="row">1</th>
+                                                <td><img src="../../static/app/images/books/java2.jpg" class="card-img-top" height="100px" alt="..."></td>
+                                                <td>Java</td>
+                                                <td>Programming</td>
+                                                <td>Satyam</td>
+
+                                                <td class="pe-0 text-end"><a class="btn btn-info btn-sm" href="">Return</a></td>
+
+                                                <td class="ps-0"> <a class="btn btn-success btn-sm" href="">Purchase</a></td>
+
+                                            </tr>
+                                            <tr class=" align-text-bottom">
+                                                <th scope="row">1</th>
+                                                <td><img src="../../static/app/images/books/java2.jpg" class="card-img-top" height="100px" alt="..."></td>
+                                                <td>Java</td>
+                                                <td>Programming</td>
+                                                <td>Satyam</td>
+
+                                                <td class="pe-0 text-end"><a class="btn btn-info btn-sm" href="">Return</a></td>
+
+                                                <td class="ps-0"> <a class="btn btn-success btn-sm" href="">Purchase</a></td>
+
+                                            </tr>
+                                            <tr class=" align-text-bottom">
+                                                <th scope="row">1</th>
+                                                <td><img src="../../static/app/images/books/java2.jpg" class="card-img-top" height="100px" alt="..."></td>
+                                                <td>Java</td>
+                                                <td>Programming</td>
+                                                <td>Satyam</td>
+
+                                                <td class="pe-0 text-end"><a class="btn btn-info btn-sm" href="">Return</a></td>
+
+                                                <td class="ps-0"> <a class="btn btn-success btn-sm" href="">Purchase</a></td>
+
+                                            </tr>
+                                            <tr class=" align-text-bottom">
+                                                <th scope="row">1</th>
+                                                <td><img src="../../static/app/images/books/java2.jpg" class="card-img-top" height="100px" alt="..."></td>
+                                                <td>Java</td>
+                                                <td>Programming</td>
+                                                <td>Satyam</td>
+
+                                                <td class="pe-0 text-end"><a class="btn btn-info btn-sm" href="">Return</a></td>
+
+                                                <td class="ps-0"> <a class="btn btn-success btn-sm" href="">Purchase</a></td>
+
+                                            </tr>
+                                            <tr class=" align-text-bottom">
+                                                <th scope="row">1</th>
+                                                <td><img src="../../static/app/images/books/java2.jpg" class="card-img-top" height="100px" alt="..."></td>
+                                                <td>Java</td>
+                                                <td>Programming</td>
+                                                <td>Satyam</td>
+
+                                                <td class="pe-0 text-end"><a class="btn btn-info btn-sm" href="">Return</a></td>
+
+                                                <td class="ps-0"> <a class="btn btn-success btn-sm" href="">Purchase</a></td>
+
+                                            </tr>
+                                            <tr class=" align-text-bottom">
+                                                <th scope="row">1</th>
+                                                <td><img src="../../static/app/images/books/java2.jpg" class="card-img-top" height="100px" alt="..."></td>
+                                                <td>Java</td>
+                                                <td>Programming</td>
+                                                <td>Satyam</td>
+
+                                                <td class="pe-0 text-end"><a class="btn btn-info btn-sm" href="">Return</a></td>
+
+                                                <td class="ps-0"> <a class="btn btn-success btn-sm" href="">Purchase</a></td>
+
+                                            </tr>
+                                            <tr class=" align-text-bottom">
+                                                <th scope="row">1</th>
+                                                <td><img src="../../static/app/images/books/java2.jpg" class="card-img-top" height="100px" alt="..."></td>
+                                                <td>Java</td>
+                                                <td>Programming</td>
+                                                <td>Satyam</td>
+
+                                                <td class="pe-0 text-end"><a class="btn btn-info btn-sm" href="">Return</a></td>
+
+                                                <td class="ps-0"> <a class="btn btn-success btn-sm" href="">Purchase</a></td>
+
+                                            </tr>
+
+
+
+
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+            </form>
+        </div>
+
+
+        </div>
+
+    </main>
+    <!-- Main Content end-->
+    {% endblock content %}

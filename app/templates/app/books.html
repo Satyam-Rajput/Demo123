@@ -1,0 +1,245 @@
+<!-- inheriting base.html for the common code -->
+
+{% extends 'app/base.html' %}
+
+
+<!-- Loading static files in Django -->
+{% load static %} {% block title %}Issued Books{% endblock title %} {% block specificCSS %}
+<link rel="stylesheet" href='{%static "app/css/books.css"%}'> {% endblock specificCSS %} {% block body %}
+
+<body class="bg-info">{% endblock body %} {% block content %}
+
+    <!-- Main content start -->
+    {% include "app/navbar.html" %}
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-10 offset-sm-2 pt-2 pb-2">
+
+                <h3 class=" text-light">Categories</h3>
+            </div>
+
+            <div class="col-10 offset-sm-2 ">
+
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner ">
+                        <div class="carousel-item active">
+                            <div class="col-xs-3 col-sm-3 col-md-3 bg-dark">
+
+                                <a class="text-decoration-none text-light" href="">
+                                    <div class="card" style="width: 100%;">
+                                        <img src="../../static/app/images/books/java1.jpg" class="card-img-top" height="200px" alt="...">
+                                        <div class="card-body bg-dark">
+                                            <h5 class="card-title text-center ">Programming</h5>
+
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 bg-dark">
+
+                                <a class="text-decoration-none text-light" href="">
+                                    <div class="card" style="width: 100%;">
+                                        <img src="../../static/app/images/books/java1.jpg" class="card-img-top" height="200px" alt="...">
+                                        <div class="card-body bg-dark">
+                                            <h5 class="card-title text-center ">Programming</h5>
+
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 bg-dark">
+
+                                <a class="text-decoration-none text-light" href="">
+                                    <div class="card" style="width: 100%;">
+                                        <img src="../../static/app/images/books/java1.jpg" class="card-img-top" height="200px" alt="...">
+                                        <div class="card-body bg-dark">
+                                            <h5 class="card-title text-center ">Programming</h5>
+
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+
+                        </div>
+
+                        <div class="carousel-item ">
+                            <div class="col-xs-3 col-sm-3 col-md-3 bg-dark">
+
+                                <a class="text-decoration-none text-light" href="">
+                                    <div class="card" style="width: 100%;">
+                                        <img src="../../static/app/images/books/java1.jpg" class="card-img-top" height="200px" alt="...">
+                                        <div class="card-body bg-dark">
+                                            <h5 class="card-title text-center ">Programming</h5>
+
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 bg-dark">
+
+                                <a class="text-decoration-none text-light" href="">
+                                    <div class="card" style="width: 100%;">
+                                        <img src="../../static/app/images/books/java1.jpg" class="card-img-top" height="200px" alt="...">
+                                        <div class="card-body bg-dark">
+                                            <h5 class="card-title text-center ">Programming</h5>
+
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 bg-dark">
+
+                                <a class="text-decoration-none text-light" href="">
+                                    <div class="card" style="width: 100%;">
+                                        <img src="../../static/app/images/books/java1.jpg" class="card-img-top" height="200px" alt="...">
+                                        <div class="card-body bg-dark">
+                                            <h5 class="card-title text-center ">Programming</h5>
+
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- middle carousel -->
+
+
+        <div class="row">
+            <div class="col-10 offset-sm-2 pt-3 pb-2">
+
+                <h3 class="text-light">Authors</h3>
+            </div>
+
+            <div class="col-10 offset-sm-2">
+
+                <div id="second" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner ">
+                        <div class="carousel-item active">
+                            <div class="col-xs-3 col-sm-3 col-md-3 bg-dark">
+
+                                <a class="text-decoration-none text-light" href="">
+                                    <div class="card" style="width: 100%;">
+                                        <img src="../../static/app/images/books/java2.jpg" class="card-img-top" height="200px" alt="...">
+                                        <div class="card-body bg-dark">
+                                            <h5 class="card-title text-center ">Satyam Rajput</h5>
+
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 bg-dark">
+
+                                <a class="text-decoration-none text-light" href="">
+                                    <div class="card" style="width: 100%;">
+                                        <img src="../../static/app/images/books/java2.jpg" class="card-img-top" height="200px" alt="...">
+                                        <div class="card-body bg-dark">
+                                            <h5 class="card-title text-center ">Shivam Sharma</h5>
+
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 bg-dark">
+
+                                <a class="text-decoration-none text-light" href="">
+                                    <div class="card" style="width: 100%;">
+                                        <img src="../../static/app/images/books/java2.jpg" class="card-img-top" height="200px" alt="...">
+                                        <div class="card-body bg-dark">
+                                            <h5 class="card-title text-center ">Vikas Yadav</h5>
+
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="carousel-item  justify-content-center ">
+                            <div class="col-xs-3 col-sm-3 col-md-3 bg-dark">
+
+                                <a class="text-decoration-none text-light" href="">
+                                    <div class="card" style="width: 100%;">
+                                        <img src="../../static/app/images/books/java2.jpg" class="card-img-top" height="200px" alt="...">
+                                        <div class="card-body bg-dark">
+                                            <h5 class="card-title text-center ">Pratik Lahari</h5>
+
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 bg-dark">
+
+                                <a class="text-decoration-none text-light" href="">
+                                    <div class="card" style="width: 100%;">
+                                        <img src="../../static/app/images/books/java2.jpg" class="card-img-top" height="200px" alt="...">
+                                        <div class="card-body bg-dark">
+                                            <h5 class="card-title text-center ">Aman Baghel</h5>
+
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 bg-dark">
+
+                                <a class="text-decoration-none text-light" href="">
+                                    <div class="card" style="width: 100%;">
+                                        <img src="../../static/app/images/books/java2.jpg" class="card-img-top" height="200px" alt="...">
+                                        <div class="card-body bg-dark">
+                                            <h5 class="card-title text-center ">Anshu Pal</h5>
+
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#second" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <!-- Main Content end-->
+    {% endblock content %}

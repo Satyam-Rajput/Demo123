@@ -1,0 +1,108 @@
+<!-- inheriting base.html for the common code -->
+
+{% extends 'app/base.html' %}
+
+
+<!-- Loading static files in Django -->
+{% load static %} {% block title %}Issued Books{% endblock title %} {% block specificCSS %}
+<link rel="stylesheet" href='{%static "app/css/purchased-books.css"%}'> {% endblock specificCSS %} {% block body %}
+
+<body class="bg-info">{% endblock body %} {% block content %}
+
+    <!-- Main content start -->
+    {% include "app/navbar.html" %}
+
+    <main class="bg-info">
+        <div class="container  justify-content-center mt-3 ">
+            <form action="">
+                <div class="row   login-form">
+
+                    <div class="col-lg-8 col-md-10 col-sm-12 col-12 text-dark bg-dark rounded ">
+                        <div class="row ">
+                            <div class="col-2 bg-dark  pt-1 pb-1">
+                                <img src="../../static/app/images/apple-touch-icon.png" height="50px" alt="LMS">
+                            </div>
+                            <div class="col-10 bg-dark text-center pt-1 pb-1 pe-5 login-heading">
+
+                                <h2 class="text-light login-heading ">Book Details</h2>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-lg-10 col-md-10 col-sm-12 col-12 offset-md-2 bg-dark   ">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="../../static/app/images/books/java1.jpg" class="img-fluid rounded-start" alt="...">
+                                        </div>
+                                        <div class="col-md-8 ">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Book Details</h5>
+                                                <p class="card-text">
+
+                                                    <table>
+                                                        <tr>
+                                                            <td> <strong> Title</strong> </td>
+                                                            <td> Java programming</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td> <strong> Author</strong> </td>
+                                                            <td> XYZ</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td> <strong> Category</strong> </td>
+                                                            <td>programming</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=" align-text-top "> <strong> Description</strong> </td>
+                                                            <td> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus sed, tempora
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td> <strong> Price</strong> </td>
+                                                            <td>1000 Rs</td>
+
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td></td>
+                                                            <td><a class="btn btn-info btn-sm mt-3 " href="{% url 'purchased-books' %}">Back</a></td>
+                                                        </tr>
+
+                                                    </table>
+
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+            </form>
+        </div>
+
+
+        </div>
+
+    </main>
+    <!-- Main Content end-->
+    {% endblock content %}

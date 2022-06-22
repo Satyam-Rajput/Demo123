@@ -1,0 +1,29 @@
+/* css file specifically for login page */
+
+:root {
+    --bg-color: red;
+    --font-color: rgb(124, 92, 85);
+    --color1: rgba(19, 214, 155, 0.767);
+    --color2: rgb(248, 248, 248);
+    --border-color: #404040;
+    --font-color2: coral;
+    --font-size: 2vh;
+}
+
+.login-form {
+    display: flex;
+    align-items: center;
+    height: 85vh;
+    justify-content: center;
+}
+
+.form {
+    max-height: 50vh;
+}
+
+@media screen and (max-width: 580px) {
+    .form {
+        height: auto;
+        max-height: max-content;
+    }
+}

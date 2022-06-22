@@ -1,0 +1,137 @@
+<!-- inheriting base.html for the common code -->
+
+{% extends 'app/base.html' %}
+
+
+<!-- Loading static files in Django -->
+{% load static %} {% block title %}About us{% endblock title %} {% block specificCSS %}
+<link rel="stylesheet" href='{%static "app/css/aboutus.css"%}'> {% endblock specificCSS %} {% block body %}
+
+<body class="bg-info">{% endblock body %} {% block content %}
+
+    <!-- Main content start -->
+    {% include "app/navbar.html" %}
+    <main>
+        <div class="container  justify-content-center mt-2 ">
+            <form action="">
+                <div class="row   login-form">
+
+                    <div class="col-lg-10 col-md-10 col-sm-11 col-11 text-dark bg-secondary rounded ">
+                        <div class="row ">
+                            <div class="col-2 bg-dark  pt-1 pb-1">
+                                <img src="../../static/app/images/apple-touch-icon.png" height="50px" alt="LMS">
+                            </div>
+                            <div class="col-10 bg-dark text-center pt-1 pb-1 pe-5 login-heading">
+
+                                <h2 class="text-light login-heading ">About us</h2>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="row pt-4 pb-4 bg-dark text-light">
+
+                            <div class="col-12 bg-dark text-light">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item bg-dark text-light">
+                                        <h2 class="accordion-header " id="headingOne">
+                                            <button class="accordion-button accordion-color text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                      Who are we
+                                    </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body text-justify">
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam sequi exercitationem dolore praesentium omnis ipsum minima quos a aliquam distinctio quidem itaque earum atque, cum consequatur? Doloribus, rerum ex, dolore maxime esse iusto neque animi voluptatem
+                                                harum asperiores enim at quisquam labore aperiam, possimus amet ea suscipit illum. Corrupti nemo sint dolorem error magni fugit ea, eius et reprehenderit, quas at necessitatibus. Minima animi, similique
+                                                dicta tenetur officia eligendi officiis? Sit exercitationem molestiae veniam, eaque quod nesciunt et minima quas earum maxime illum odio aut officia quae numquam officiis perspiciatis omnis modi ducimus
+                                                aspernatur ipsum iusto. Atque reiciendis neque, doloribus voluptate necessitatibus sequi nam consequuntur, cupiditate fuga, nemo obcaecati labore corporis alias ducimus deleniti? Alias quasi commodi amet
+                                                doloribus unde eligendi optio, illo rem dolorum nemo placeat sint iure ex velit quod beatae temporibus repudiandae maxime sequi aperiam voluptate quos.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item bg-dark text-light">
+                                        <h2 class="accordion-header " id="headingOne">
+                                            <button class="accordion-button accordion-color text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                      What we do
+                                    </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis possimus debitis nostrum corrupti? Quidem facere eius eligendi iure vitae porro hic. Amet sunt nam delectus laborum nisi, ut dolor. Error minima commodi magnam quod esse doloribus,
+                                                ab eaque neque cum deserunt eveniet similique optio adipisci! Nobis, error corporis nemo enim facilis nihil a, sunt voluptatum itaque quisquam laboriosam porro dicta repellendus! Voluptatem et architecto
+                                                quam praesentium nostrum vero maxime? Eaque, sunt? Iusto dicta inventore ea facere debitis, similique est quod ex cum porro libero nostrum iure accusantium illo saepe id voluptas soluta vel eius. Accusamus
+                                                sunt voluptatum repellat earum illo. Exercitationem accusamus sint ad recusandae perferendis et pariatur modi repellendus ea tempora aliquid consequatur eos alias illum voluptate at vero reprehenderit ex,
+                                                sapiente nam explicabo ullam. Quis labore autem vitae consectetur incidunt nostrum ad neque aperiam, doloremque, aut iure! Facere!
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item bg-dark text-light">
+                                        <h2 class="accordion-header " id="headingOne">
+                                            <button class="accordion-button accordion-color text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                      How we do it
+                                    </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sapiente labore rem fugit perferendis pariatur corporis nostrum. Iste temporibus vero minus. Repellendus inventore eos quisquam nam optio sunt repellat eaque? At perspiciatis sapiente veritatis
+                                                commodi tempora. Tempore temporibus repellendus quas numquam, adipisci commodi placeat recusandae nulla architecto officia tenetur voluptatum id libero. Placeat aliquid sed, debitis veniam animi quod laboriosam
+                                                obcaecati, sequi dicta commodi aliquam vero inventore? Officiis autem, accusamus consequatur necessitatibus enim dolor cupiditate debitis vitae numquam facilis, nisi eum rerum molestiae, beatae maxime. Perferendis
+                                                eum sequi inventore dolores cumque, magni soluta illum distinctio? Corporis a, nihil aperiam recusandae ad earum doloremque ratione, cupiditate id necessitatibus omnis, suscipit eius deleniti labore libero
+                                                assumenda tempora dolor ipsa accusantium unde ab? Ipsum vitae, odit provident molestias corrupti culpa laudantium obcaecati tenetur aspernatur perferendis. Temporibus iste perferendis ut, tenetur architecto
+                                                accusantium cum!
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item bg-dark text-light">
+                                        <h2 class="accordion-header " id="headingOne">
+                                            <button class="accordion-button accordion-color text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                      Why choose us
+                                    </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, qui! Molestias adipisci mollitia, accusantium necessitatibus quasi explicabo iure quaerat quos magnam ipsum eos sequi id, repellendus, fugit culpa aliquid beatae! Maxime nulla impedit
+                                                quibusdam magni molestiae error deserunt dicta qui provident! Amet magni odit dolores quidem. Odit officiis, totam sapiente architecto soluta hic quod eligendi culpa adipisci voluptatum obcaecati facere
+                                                a fugit nostrum beatae cumque officia alias nihil reiciendis cupiditate ipsum accusantium numquam animi ratione. Sed reprehenderit provident velit facilis accusantium delectus quod veritatis tenetur, fuga
+                                                repellat minima ea? Vel voluptate aperiam nihil, adipisci possimus quia laborum. Itaque natus quis debitis asperiores aut cupiditate voluptates sunt, optio earum nemo odit ut, temporibus consectetur quae
+                                                eaque quas, sint libero. Perferendis ex reprehenderit perspiciatis et cupiditate possimus numquam minima explicabo, debitis velit laudantium, esse id necessitatibus officiis nemo corporis assumenda earum
+                                                soluta!
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+            </form>
+        </div>
+
+
+        </div>
+
+    </main>
+    <!-- Main Content end-->
+    {% endblock content %}

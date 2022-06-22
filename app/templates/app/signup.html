@@ -1,0 +1,305 @@
+<!-- inheriting base.html for the common code -->
+
+{% extends 'app/base.html' %}
+
+
+<!-- Loading static files in Django -->
+{% load static %} {% block title %}Registration{% endblock title %} {% block specificCSS %}
+<link rel="stylesheet" href='{%static "app/css/login_page.css"%}'>
+
+
+<script src="../../static/app/js/signup.js"></script>
+{% endblock specificCSS %} {% block body %}
+
+<body class="bg-info">{% endblock body %} {% block content %}
+
+    <!-- Main content start -->
+    <!-- {% include "app/header.html" %} -->
+
+    <main>
+        <div class="container  justify-content-center mt-3 ">
+            <form action="aboutus/">
+                <div class="row   login-form">
+                    <!-- login form starts -->
+                    <div class="col-lg-8 col-md-8 col-sm-10 col-10 text-dark bg-secondary rounded ">
+
+                        <!-- logo & heading -->
+
+                        <div class="row ">
+                            <div class="col-1 bg-dark  pt-1 pb-1">
+                                <img src="../../static/app/images/apple-touch-icon.png" height="50px" alt="LMS">
+                            </div>
+                            <div class="col-11 bg-dark  text-center pt-1 pb-1 pe-5 login-heading">
+
+                                <h2 class="text-light login-heading ">Registration Form</h2>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 ">
+                                <!-- Tabs starts here -->
+                                <ul class="nav nav-tabs d-flex align-content-around justify-content-around" id="myTab" role="tablist">
+                                    <li class="nav-item " role="presentation">
+                                        <button class="nav-link active text-light bg-info mt-2 mb-2  " id="personal_details-tab" data-bs-toggle="tab" data-bs-target="#personal_details" type="button" role="tab" aria-controls="personal_details" aria-selected="true">Personal Details</button>
+                                    </li>
+                                    <li class="nav-item " role="presentation">
+                                        <button class="nav-link text-light bg-info mt-2 mb-2  " id="address_details-tab" data-bs-toggle="tab" data-bs-target="#address_details" type="button" role="tab" aria-controls="address_details" aria-selected="false">Address Details</button>
+                                    </li>
+
+                                </ul>
+                                <!-- tabs ends here -->
+
+                                <!-- Personal details forms start here -->
+
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="personal_details" role="tabpanel" aria-labelledby="personal_details-tab">
+
+                                        <div class="row d-flex justify-content-center">
+
+                                            <div class="col-lg-4 col-md-4 col-sm-10 col-10   ">
+                                                <div class="form-floating mb-1 mt-3 ">
+                                                    <input type="text" class="form-control form-control-sm mt-1 text-info" id="first_name" placeholder="First Name" required>
+                                                    <label for="first_name">First Name</label>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="col-lg-4 col-md-4 col-sm-10 col-10   ">
+                                                <div class="form-floating mb-1 mt-3 ">
+                                                    <input type="text" class="form-control form-control-sm mt-1 text-info" id="last_name" placeholder="First Name" required>
+                                                    <label for="last_name">Last Name</label>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="row d-flex justify-content-center d-none d-sm-none d-md-flex error">
+
+
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-4  mb-2 mt-1 ">
+                                                <span id="first_name_error" class="form-text text-danger">
+                                            Must be 8-20 characters long.
+                                          </span>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-4  mb-2 mt-1 ">
+                                                <span id="first_name_error" class="form-text text-danger">
+                                            Must be 8-20 characters long.
+                                          </span>
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row d-flex justify-content-center">
+
+                                            <div class="col-lg-4 col-md-4 col-sm-10 col-10  ">
+                                                <div class="form-floating mb-1 mt-3 ">
+                                                    <input type="email" class="form-control form-control-sm mt-1 text-info" id="email" placeholder="Email Address" required>
+                                                    <label for="email">Email</label>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="col-lg-4 col-md-4 col-sm-10 col-10  ">
+                                                <div class="form-floating mb-1 mt-3 ">
+                                                    <input type="number" class="form-control form-control-sm mt-1 text-info" id="phone" placeholder="Phone Number" required>
+                                                    <label for="phone">Phone Number</label>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="row d-flex justify-content-center d-none d-sm-none d-md-flex error">
+
+
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-4  mb-2 mt-1 ">
+                                                <span id="email_error" class="form-text text-danger">
+                                            Must be 8-20 characters long.
+                                          </span>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-4  mb-2 mt-1 ">
+                                                <span id="phone_error" class="form-text text-danger">
+                                            Must be 8-20 characters long.
+                                          </span>
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row d-flex justify-content-center">
+
+                                            <div class="col-lg-4 col-md-4 col-sm-10 col-10   ">
+                                                <div class="form-floating mb-1 mt-3 ">
+                                                    <input type="password" class="form-control form-control-sm mt-1 text-info" id="password" placeholder="Password" required>
+                                                    <label for="password">Password</label>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="col-lg-4 col-md-4 col-sm-10 col-10  ">
+                                                <div class="form-floating mb-1 mt-3 ">
+                                                    <input type="password" class="form-control form-control-sm mt-1 text-info" id="confirm_password" placeholder="Confirm Password" required>
+                                                    <label for="confirm_password">Confirm Password</label>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="row d-flex justify-content-center d-none d-sm-none d-md-flex error">
+
+
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-4  mb-2 mt-1 ">
+                                                <span id="password_error" class="form-text text-danger">
+                                            Must be 8-20 characters long.
+                                          </span>
+
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-4  mb-2 mt-1 ">
+                                                <span id="confirm_password_error" class="form-text text-danger">
+                                            Must be 8-20 characters long.
+                                          </span>
+
+                                            </div>
+
+
+                                        </div>
+
+
+
+
+
+
+                                    </div>
+
+                                    <!-- personal details ends here  -->
+
+
+                                    <!-- Address details starts here  -->
+                                    <div class="tab-pane fade" id="address_details" role="tabpanel" aria-labelledby="address_details-tab">
+
+                                        <div class="row d-flex justify-content-center">
+
+                                            <div class="col-lg-4 col-md-4 col-sm-10 col-10   ">
+                                                <div class="form-floating mb-1 mt-3 ">
+                                                    <input type="number" class="form-control form-control-sm mt-1 text-info" id="house_number" placeholder="House  Number" required>
+                                                    <label for="house_number">House Number</label>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="col-lg-4 col-md-4 col-sm-10 col-10   ">
+                                                <div class="form-floating mb-1 mt-3">
+                                                    <input type="text" class="form-control form-control-sm mt-1 text-info" id="street_name" placeholder="Street Name" required>
+                                                    <label for="street_name">Street Name</label>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="row d-flex justify-content-center">
+
+                                            <div class="col-lg-4 col-md-4 col-sm-10 col-10 mb-1 mt-3 ">
+                                                <select id='country' class="form-select form-select mb-3" style="height: 58px" aria-label=".form-select-lg example">
+                                                <option selected>Country</option>
+                                                <option value="India">India</option>
+                                                <option value="Nepal">Nepal</option>
+                                                <option value='Sri Lanka'>Sri Lanka</option>
+                                              </select>
+
+                                            </div>
+
+
+                                            <div class="col-lg-4 col-md-4 col-sm-10 col-10 mb-1 mt-3 ">
+                                                <select id='state' class="form-select form-select mb-3" style="height: 58px" aria-label=".form-select-lg example">
+                                                <option selected>State</option>
+                                                
+                                              </select>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="row d-flex justify-content-center">
+
+                                            <div class="col-lg-4 col-md-4 col-sm-10 col-10 mb-1 mt-3 ">
+                                                <select id='city' class="form-select form-select mb-3" style="height: 58px" aria-label=".form-select-lg example">
+                                                <option selected>City</option>
+                                                
+                                              </select>
+
+                                            </div>
+
+
+                                            <div class="col-lg-4 col-md-4 col-sm-10 col-10   ">
+                                                <div class="form-floating mb-1 mt-3 ">
+                                                    <input type="number" class="form-control form-control-sm mt-1 text-info" id="pincode" placeholder="Pincode" required>
+                                                    <label for="pincode">Pincode</label>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+
+
+
+                                    </div>
+
+                                    <!-- Address details ends here  -->
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- login button -->
+
+                        <div class="row">
+                            <div class="col-8 offset-2">
+
+
+                                <div class="d-grid gap-2 ">
+
+                                    <input type="submit" class="btn btn-info text-light rounded-pill login-button btn-sm  mt-3 mb-3 ms-lg-4 ms-md-3 " value="Signup">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-9 col-sm-10 col-12 offset-lg-4 offset-md-4 offset-sm-2 offset-3 mb-4"><a class="anchor  ms ms-lg-5 md-4 ms-sm-2 ms-2 text-light  " href="{% url 'login' %}">Already have a account?</a></div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+            </form>
+        </div>
+
+
+        </div>
+
+    </main>
+    <!-- Main Content end-->
+    {% endblock content %}

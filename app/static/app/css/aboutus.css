@@ -1,0 +1,24 @@
+/* css file specifically for login page */
+
+:root {
+    --secondary: #6c757d;
+    --info: #17a2b8;
+    --dark: #343a40;
+    --light: #f8f9fa;
+    --white: #ffffff;
+    --danger: #dc3545;
+    --success: #28a745;
+    --primary: #007bff;
+    --warning: #ffc107;
+}
+
+.login-form {
+    display: flex;
+    align-items: center;
+    height: 85vh;
+    justify-content: center;
+}
+
+.accordion-color {
+    background-color: skyblue !important;
+}

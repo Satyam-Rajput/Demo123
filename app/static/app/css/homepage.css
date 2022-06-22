@@ -1,0 +1,30 @@
+/* css file specifically for login page */
+
+:root {
+    --bg-color: red;
+    --font-color: rgb(124, 92, 85);
+    --color1: rgba(19, 214, 155, 0.767);
+    --color2: rgb(248, 248, 248);
+    --border-color: #404040;
+    --font-color2: coral;
+    --font-size: 2vh;
+}
+
+.side-data {
+    min-height: 85vh;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link:hover {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .side-data {
+        height: auto;
+        min-height: auto;
+    }
+}

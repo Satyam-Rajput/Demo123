@@ -1,0 +1,100 @@
+<!-- inheriting base.html for the common code -->
+
+{% extends 'app/base.html' %}
+
+
+<!-- Loading static files in Django -->
+{% load static %} {% block title %}Login Page{% endblock title %} {% block specificCSS %}
+<link rel="stylesheet" href='{%static "app/css/login_page.css"%}'> {% endblock specificCSS %} {% block body %}
+
+<body class="bg-info">{% endblock body %} {% block content %}
+
+    <!-- Main content start -->
+    <!-- {% include "app/header.html" %} -->
+
+    <main class="bg-info">
+        <div class="container  justify-content-center mt-3 ">
+            <form action="{% url 'authenticate' %} "  method='post' novalidate> {% csrf_token %}
+                <div class="row   login-form">
+
+                    <div class="col-lg-4 col-md-6 col-sm-8 col-10 text-dark bg-secondary rounded ">
+                        <div class="row ">
+                            <div class="col-2 bg-dark  pt-1 pb-1">
+                                <img class="img-fluid" src="../../static/app/images/apple-touch-icon.png" height="50px" alt="LMS">
+                            </div>
+                            <div class="col-10 bg-dark text-center pt-1 pb-1 pe-5 login-heading">
+
+                                <h2 class="text-light login-heading ">Login Form</h2>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-lg-8 col-md-7 col-sm-8 col-8  offset-2 ">
+                                <div class="form-floating mb-1 mt-5 ">
+                                    <input type="email" class="form-control form-control-sm mt-1 text-info" id="email" name="email" placeholder="Email Address" required>
+                                    <label for="email">Email</label>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-8 col-md-7 col-sm-8 col-8 offset-2 mb-3 error">
+                                <span id="passwordHelpInline" class="form-text text-danger">
+                            Must be 8-20 characters long.
+                          </span>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-7 col-sm-8 col-8 offset-2">
+
+                                <div class="form-floating mb-1">
+                                    <input type="password" class="form-control form-control-sm mt-1 text-info" id="password" name="password" placeholder="Password" required>
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-7 col-sm-8 col-8 offset-2 mb-2 error">
+                                <span id="passwordHelpInline" class="form-text text-danger">
+                            Must be 8-20 characters long.
+                          </span>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-8 col-md-9 col-sm-10  offset-lg-3 offset-md-3 offset-sm-2 offset-4 "><a class="anchor ms-lg-4 ms-md-2 ms-sm-3 text-light  " href="">Forgot Password</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-8 col-md-9 col-sm-10 col-12 offset-lg-3 offset-md-2 offset-sm-2 offset-3 "><a class="anchor  ms-lg-3 ms-md-4 ms-sm-2 ms-2 text-light " href="{% url 'sign-up' %}">Don't have a account?</a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8 offset-2">
+
+
+                                    <div class="d-grid gap-2 ">
+
+                                        <input type="submit" class="btn btn-info text-light rounded-pill login-button btn-sm mb-2 ms-lg-4 ms-md-3  mt-2" value="Login">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+            </form>
+        </div>
+
+
+        </div>
+
+    </main>
+    <!-- Main Content end-->
+    {% endblock content %}

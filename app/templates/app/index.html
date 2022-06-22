@@ -1,0 +1,323 @@
+<!-- inheriting base.html for the common code -->
+
+{% extends 'app/base.html' %}
+
+
+<!-- Loading static files in Django -->
+{% load static %} {% block title %}Home{% endblock title %} {% block specificCSS %}
+<link rel="stylesheet" href='{%static "app/css/homepage.css"%}'> {% endblock specificCSS %} {% block body %}
+
+<body class="bg-info">{% endblock body %} {% block content %}
+
+    <!-- Main content start -->
+    {% include "app/navbar.html" %}
+    <main>
+
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </symbol>
+            <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+            </symbol>
+            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </symbol>
+          </svg>
+
+        <div class="container-fluid bg-info " style="min-width: 95vw;;">
+
+
+
+            <div class="row ">
+                <!-- side bar left -->
+
+                <div class="col-12 text-md-center text-light col-md-2   side-data">
+
+
+
+
+                    <div class="row">
+
+                        <div class="col-12 ">
+
+                            <h5 class="pt-3 pb-3 text-muted ">Purchased Books</h5>
+
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="col-12 ">
+
+                            <a href="" class="link text-light">Book1</a>
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12">
+
+                            <a href="" class=" link text-light">Book2</a>
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12 ">
+
+                            <a href="" class=" link text-light">Book3</a>
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12 ">
+
+                            <a href="" class=" link text-light">Book4</a>
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="col-12 ">
+
+                            <h5 class="pt-3 pb-3 text-muted">Issued Books</h5>
+
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="col-12 ">
+
+                            <a href="" class="link text-light">Book1</a>
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12">
+
+                            <a href="" class=" link text-light">Book2</a>
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12 ">
+
+                            <a href="" class=" link text-light">Book3</a>
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12 ">
+
+                            <a href="" class=" link text-light">Book4</a>
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Middle data -->
+
+                <div class="col-12  col-md-8 text-md-center pt-2 bg-dark text-light mt-4 side-data">
+
+                    <h3 class="pb-2"> Welcome back User </h3>
+
+
+                    <div class="alert d-flex alert-success  alert-dismissible fade show" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+
+
+                        <div class="text-center">
+                            <strong>Thanks!</strong> Thank you for purchasing the books. we are hoping that you are happy with our service.
+
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+
+                    <div class="alert d-flex alert-info  alert-dismissible fade show" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+                        <div class="text-center">
+                            <strong>Special Offer!</strong> Purchase a book on your birthday and get extra 10% off.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+
+                    <div class="alert d-flex alert-info  alert-dismissible fade show" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+                        <div class="text-center">
+                            <strong>New Books Arrived</strong> We have added some new books for you.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="alert d-flex alert-warning  alert-dismissible fade show" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+
+                        <div class="text-center">
+                            <strong>Due Dates!</strong> Remember to return the books on due dates else fine will be imposed.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+
+                    <div class="alert d-flex alert-danger  alert-dismissible fade show" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+
+                        <div class="text-center">
+                            <strong>Pending Payments!</strong> Remember to complete the payments.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+
+
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio cupiditate nostrum, ipsa pariatur neque omnis ut recusandae in nesciunt repudiandae aspernatur. Nostrum, debitis tenetur sapiente, ipsa amet quas est asperiores, placeat iusto atque earum!
+                    Maiores, itaque asperiores? Ducimus laboriosam nam non earum aliquam provident ullam laborum voluptatibus, omnis corporis tenetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque rerum harum voluptatum, debitis ullam
+                    neque quis perspiciatis tenetur ex totam error, possimus repudiandae reiciendis sequi est, amet quo aliquid adipisci? Consequuntur placeat dicta incidunt eius cum harum autem atque consectetur porro a eos voluptatum, debitis aut voluptate
+                    vero quaerat blanditiis eligendi nisi, commodi culpa nemo odit inventore hic dolore? Ad ipsam aspernatur labore, laudantium explicabo excepturi asperiores placeat exercitationem neque harum quasi error distinctio unde et omnis officia,
+                    illo veritatis animi deleniti. Iste autem, asperiores inventore aspernatur ea vero quidem cupiditate harum praesentium est dolorum suscipit deleniti corporis? Non nostrum libero tempora, expedita accusamus corrupti illo ducimus eligendi
+                    sapiente voluptatum? Impedit natus in quo, fugiat saepe nulla ab. Dolorum, voluptatum. Repellendus, optio vel. Quos nobis asperiores autem delectus qui molestias dicta facere, odio nostrum sequi, voluptatibus aliquam facilis distinctio?
+                    At sed repellat reprehenderit. Impedit nemo mollitia ab perspiciatis tempora dolor doloremque incidunt fugiat consequatur et beatae, est, quod amet. Natus magni at voluptate itaque repellendus earum. Reiciendis, dolores omnis reprehenderit
+                    aperiam corporis, soluta fugiat magnam architecto totam aliquid, consectetur aut doloribus itaque sit dolorem accusamus commodi quo dicta? Temporibus, praesentium! Quaerat libero fugit sit, sequi repellendus mollitia modi ab rem? lorem5000
+
+
+                </div>
+
+
+                <!-- side bar right -->
+                <div class="col-12 text-md-center text-light col-md-2  side-data">
+                    <div class="row">
+
+                        <div class="col-12 ">
+
+                            <h5 class="pt-3 pb-3 text-muted">Payments Pending</h5>
+
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="col-12 ">
+
+                            <a href="" class="link text-light">Payment 1</a>
+                            <hr class="divider text-light ">
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12">
+
+                            <a href="" class=" link text-light">Payment2</a>
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12 ">
+
+                            <a href="" class=" link text-light">Payment 3</a>
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12 ">
+
+                            <a href="" class=" link text-light">Payment4</a>
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="col-12 ">
+
+                            <h5 class="pt-3 pb-3 text-muted">Due Dates</h5>
+
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="col-12 ">
+
+                            <a href="" class="link text-light">Due date for Book1</a>
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12">
+
+                            <a href="" class=" link text-light">Due date for Book2</a>
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12 ">
+
+                            <a href="" class=" link text-light">Due date for Book3</a>
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12 ">
+
+                            <a href="" class=" link text-light">Due date for Book4</a>
+                            <hr class="divider text-light">
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </main>
+    <!-- Main Content end-->
+    {% endblock content %}

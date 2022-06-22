@@ -1,0 +1,170 @@
+/* css file specifically for login page */
+
+:root {
+    --bg-color: red;
+    --font-color: rgb(124, 92, 85);
+    --color1: rgba(19, 214, 155, 0.767);
+    --color2: rgb(248, 248, 248);
+    --border-color: #404040;
+    --font-color2: coral;
+    --font-size: 2.2vh;
+    --font-size2: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-image: url('../images/login_page.jpg'); */
+    /* The image used */
+    /* Full height */
+    height: 100vh;
+    width: 100vw;
+    /* Center and scale the image nicely */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--font-color);
+}
+
+.error {
+    visibility: hidden;
+    font-size: smaller;
+    padding: 0px;
+}
+
+.submitButton:hover {
+    background: linear-gradient(50deg, var(--color1), var(--color2), var(--color1), var(--color2), var(--color1));
+}
+
+.box {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input {
+    position: relative;
+    left: 2.5rem;
+    width: 15vw;
+    padding-top: 0.5rem;
+}
+
+.input-left {
+    position: relative;
+    left: 2.5rem;
+    width: 30vw;
+    padding-top: 0.5rem;
+    padding-right: 10px;
+}
+
+.input-right {
+    position: relative;
+    width: 30vw;
+    padding-top: 0.5rem;
+}
+
+.address {
+    position: relative;
+    left: 2.5rem;
+    width: 15.5vw;
+    padding-top: 0.5rem;
+    padding-right: 10px;
+}
+
+.submitButton {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    left: 150%;
+}
+
+.submit input {
+    width: 22vw;
+    height: 3%;
+    border-radius: 1vw;
+    background: linear-gradient(50deg, var(--color1), var(--color2), var(--color1));
+    font-size: var(--font-size);
+}
+
+.font-style {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    color: var(--font-color2);
+}
+
+.font-weight {
+    font-size: var(--font-size);
+}
+
+.form {
+    position: relative;
+    height: 75vh;
+    width: 65vw;
+    /* background-color: rgba(112, 110, 110, 0.8); */
+    background: linear-gradient(50deg, var(--color1), var(--color2), var(--color1), var(--color2), var(--color1));
+    border: 2px solid var(--border-color);
+    border-radius: 2vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width:768px) {
+    .font-weight {
+        font-size: var(--font-size);
+    }
+    .input-left {
+        position: relative;
+        left: 2.5rem;
+        width: 60vw;
+        padding-top: 0.5rem;
+        padding-right: 10vw;
+    }
+    .input-right {
+        position: relative;
+        left: 2.5rem;
+        width: 60vw;
+        padding-top: 0.5rem;
+        padding-right: 10vw;
+    }
+    .address {
+        position: relative;
+        left: 2.5rem;
+        width: 60vw;
+        padding-top: 0.5rem;
+        padding-right: 10vw;
+    }
+    .submit input {
+        width: 40vw;
+        height: 2%;
+        border-radius: 20vw;
+        padding-bottom: 5%;
+        background: linear-gradient(50deg, var(--color1), var(--color2), var(--color1));
+        font-size: var(--font-size);
+    }
+    .submitButton {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        left: 40%;
+        bottom: 10px;
+    }
+}
+
+@media screen and (max-height:550px) {
+    .font-weight {
+        font-size: var(--font-size2);
+    }
+    .submit input {
+        width: 40vw;
+        height: 2%;
+        border-radius: 20vw;
+        padding-bottom: 3%;
+        background: linear-gradient(50deg, var(--color1), var(--color2), var(--color1));
+        font-size: var(--font-size2);
+    }
+}

@@ -1,0 +1,196 @@
+<!-- inheriting base.html for the common code -->
+
+{% extends 'app/base.html' %}
+
+
+<!-- Loading static files in Django -->
+{% load static %} {% block title %}Contact us{% endblock title %} {% block specificCSS %}
+<link rel="stylesheet" href='{%static "app/css/login_page.css"%}'>
+
+<script src="../../static/app/js/contact-us.js"></script>
+{% endblock specificCSS %} {% block body %}
+
+<body class="bg-info">{% endblock body %} {% block content %}
+
+    <!-- Main content start -->
+    {% include "app/navbar.html" %}
+    <main>
+        <div class="container  justify-content-center mt-3 ">
+            <form action="" class="form-floating">
+                <div class="row   login-form">
+                    <!-- login form starts -->
+                    <div class="col-lg-6 col-md-7 col-sm-10 col-10 text-dark bg-secondary rounded ">
+
+                        <!-- logo & heading -->
+
+                        <div class="row ">
+                            <div class="col-2 bg-dark  pt-1 pb-1">
+                                <img src="../../static/app/images/apple-touch-icon.png" height="50px" alt="LMS">
+                            </div>
+                            <div class="col-10 bg-dark text-center pt-1 pb-1 pe-5 login-heading">
+
+                                <h2 class="text-light login-heading ">Contact Us</h2>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 ">
+                                <!-- Tabs starts here -->
+                                <ul class="nav nav-tabs d-flex align-content-around justify-content-around" id="myTab" role="tablist">
+                                    <li class="nav-item " role="presentation">
+                                        <button class="nav-link active text-light bg-info mt-2 mb-2  " id="contact_details-tab" data-bs-toggle="tab" data-bs-target="#contact_details" type="button" role="tab" aria-controls="contact_details" aria-selected="true">Contact Details</button>
+                                    </li>
+                                    <li class="nav-item " role="presentation">
+                                        <button class="nav-link text-light bg-info mt-2 mb-2  " id="feedback-tab" data-bs-toggle="tab" data-bs-target="#feedback" type="button" role="tab" aria-controls="feedback" aria-selected="false">Feedback</button>
+                                    </li>
+
+                                </ul>
+                                <!-- tabs ends here -->
+
+                                <!-- Personal details forms start here -->
+
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="contact_details" role="tabpanel" aria-labelledby="contact_details-tab">
+
+
+
+
+
+
+
+                                        <div class="row d-flex justify-content-center">
+
+
+
+                                            <div class="col-lg-10 col-md-10 col-sm-10 col-10 text-center offset-1 text-light  ">
+                                                <h3><strong>You can contact us in various ways</strong><br><br></h3>
+
+                                                <h4> <strong><pre>HelpLine Number  :  7685947397493 </pre>  </strong></h4>
+                                                <h4> <strong><pre>Instagram :  LMS@Instagram </pre>  </strong></h4>
+                                                <h4> <strong><pre>Facebook  :  LMS@Facebook </pre>  </strong></h4>
+                                                <h4> <strong><pre>Whatsapp :  7685947397493 </pre>  </strong></h4>
+                                                <h4> <strong><pre>Email  :  LMS@demo-email.com </pre>  </strong></h4>
+
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+                                    </div>
+
+                                    <!-- personal details ends here  -->
+
+
+                                    <!-- Address details starts here  -->
+                                    <div class="tab-pane fade" id="feedback" role="tabpanel" aria-labelledby="feedback-tab">
+
+                                        <div class="row d-flex justify-content-center">
+
+
+
+                                            <div class="col-lg-7 col-md-8 col-sm-10 col-10   ">
+                                                <div class="form-floating mb-1 mt-3">
+                                                    <input type="email" class="form-control form-control-sm mt-1 text-info" id="email" placeholder="email" required>
+                                                    <label for="email">Enter your email address</label>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="row d-flex justify-content-center">
+
+                                            <div class="col-lg-7 col-md-8 col-sm-10 col-10 mb-1 mt-3 ">
+                                                <div class="form-floating">
+                                                    <textarea class="form-control text-info" placeholder="Leave a comment here" id="comment" style="height: 100px"></textarea>
+                                                    <label for="floatingTextarea2">Comments</label>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+
+                                        <div class="row d-flex justify-content-center">
+
+                                            <div class="col-lg-7 col-md-8 col-sm-10 col-10 mb-1 mt-3 ">
+                                                <div class="d-grid gap-2 ">
+
+                                                    <input type="submit" class="btn btn-info text-light rounded-pill login-button btn-sm  mb-2 " data-bs-toggle="modal" data-bs-target="#exampleModal" return false; onclick="sendEmail()" value="Send Feedback/Query">
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    </div>
+
+                                    <!-- Address details ends here  -->
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- login button -->
+
+
+
+                        <!-- Modal -->
+                        <div class="modal fade  text-light" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog ">
+                                <div class="modal-content bg-dark ">
+                                    <div class="modal-header ">
+                                        <h5 class="modal-title text-info" id="exampleModalLabel">Thanks</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body ">
+                                        Thank you for your valueable feedback we will get back you very soon!!
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+            </form>
+        </div>
+
+
+        </div>
+
+    </main>
+    <!-- Main Content end-->
+    {% endblock content %}

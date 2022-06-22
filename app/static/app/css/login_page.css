@@ -1,0 +1,146 @@
+/* css file specifically for login page */
+
+:root {
+    --bg-color: red;
+    --font-color: rgb(124, 92, 85);
+    --color1: rgba(19, 214, 155, 0.767);
+    --color2: rgb(248, 248, 248);
+    --border-color: #404040;
+    --font-color2: coral;
+    --font-size: 2vh;
+}
+
+.login-form {
+    display: flex;
+    align-items: center;
+    height: 85vh;
+    justify-content: center;
+}
+
+.tab-button {
+    width: 100%;
+}
+
+.anchor:hover {
+    font-weight: bolder;
+}
+
+.login-button:hover {
+    font-weight: bolder;
+}
+
+.anchor {
+    text-decoration: none;
+}
+
+.error {
+    visibility: hidden;
+}
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../images/login_page.jpg');
+    
+    height: 100vh;
+    width: 100vw;
+   
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--font-color);
+}
+
+.submitButton:hover {
+    background: linear-gradient(50deg, var(--color1), var(--color2), var(--color1), var(--color2), var(--color1));
+}
+
+.box {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input {
+    position: relative;
+    left: 3vw;
+    width: 22vw;
+}
+
+.label {
+    padding-top: 1vh;
+}
+
+.submit {
+    width: 20vw;
+    position: relative;
+    
+    padding-top: 1vh;
+}
+
+.submitButton {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.submit1 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.submit input {
+    width: 22vw;
+    height: 4.5vh;
+    border-radius: 2vw;
+    padding-bottom: 3vh;
+    background: linear-gradient(50deg, var(--color1), var(--color2), var(--color1));
+}
+
+
+
+.font-style {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    color: var(--font-color2);
+}
+
+.font-weight {
+    font-size: var(--font-size);
+}
+
+.form {
+    position: relative;
+    top: 15vh;
+    height: 50vh;
+    width: 30vw;
+    
+    background: linear-gradient(50deg, var(--color1), var(--color2), var(--color1), var(--color2), var(--color1));
+    border: 2px solid var(--border-color);
+    border-radius: 2vw;
+    min-width: 600;
+}
+
+.anchor {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    color: var(--font-color2);
+    padding-top: 5px;
+}
+
+.anchor:hover {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.error {
+    visibility: hidden;
+} */
